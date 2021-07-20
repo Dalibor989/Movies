@@ -4,5 +4,8 @@
 
 @section('content')
 <h1>{{$movie->title }}</h1>
-<p>{{$movie->storyline}}</p>
+<div>
+    <p>{{$movie->storyline}}</p>
+    <p>Director: <strong>{{$movie->director}}</strong>    Released: <strong>{{$movie->release_year}}</strong> Genre: <strong>{{$movie->genre}}</strong></p>
+</div>
 @endsection
