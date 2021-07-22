@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\GenreController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,7 @@ Route::get('/movies/create', [MovieController::class, 'create']);
 Route::post('/movies', [MovieController::class, 'store']);
 
 Route::get('/movies/{movie}', [MovieController::class, 'show']);
+
+Route::post('/movies/{movie}/comments', [CommentController::class, 'store']);
+
+Route::get('/genres/{genre}', [GenreController::class, 'index']);
